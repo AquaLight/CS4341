@@ -67,8 +67,12 @@ class Node:
             else:
                 print("Error in calcH: Heuristic outside of [1,6]")
                 return -1
-    def calcG():
-        return
+    
+	#calculates the cost from parent turning to the node, the cost to get to the node and the current parents cost so far
+	def calcG(self):
+		cost = turnCost(self.parent);
+			g = g + parent.g + cost
+        return g
         #somewhere in here we need calcDir()
 
     def calcDir(self):
@@ -90,7 +94,6 @@ class Node:
         elif (self.xPos < self.parent.xPos):
             direction = 4
         return direction
-
         
     def turnCost(self):
 
